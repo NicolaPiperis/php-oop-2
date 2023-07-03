@@ -1,16 +1,24 @@
 <?php
     class Product {
 
+        private $productImage;
         private $petCategory;
         private $tipology;
         private $productName;
         private $productPrice;
 
-        public function __construct ($petCategory, $tipology, $productName, $productColor, $productPrice) {
+        public function __construct ($productImage, $petCategory, $tipology, $productName, $productPrice) {
+            $this -> setProductImage($productImage);
             $this -> setpetCategory($petCategory);
             $this -> setTipology($tipology);
             $this -> setproductName($productName);
             $this -> setproductPrice($productPrice);
+        }
+
+        public function getProductImage() {
+            return $this -> productImage;
+        } public function setProductImage($productImage) {
+            $this -> productImage = $productImage;
         }
 
         public function getpetCategory() {

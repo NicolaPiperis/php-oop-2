@@ -1,48 +1,179 @@
-<?php
-
-    require_once("./models/shop.php");
-    require_once("./models/product.php");
-
-    class DetailsProductFood extends Product {
-        private $expiry;
-        private $productCode;
-
-        public function __construct (
-            $petCategory, $tipology, $productName, $productPrice, $expiry, $productCode
-        ) {
-            parent :: __construct ($petCategory, $tipology, $productName,  $productPrice);
-
-            this -> setExpiry($expiry);
-            this -> setProductCode($productCode);
-        }
-
-        public function getExpiry() {
-            return $this -> expiry;
-        } public function setExpiry($expiry) {
-            $this -> expiry = $expiry;
-        }
-
-        public function getProductCode() {
-            return $this -> productCode;
-        } public function setProductCode($productCode) {
-            $this -> productCode = $productCode;
-        }
-
-    }
-
-    $shop1 = new Shop ("Fattoria degli animali", "fattoriadeglianimali@gmail.com", "/https/FattoriaDegliAnimali.com");
-
-    echo "<br>";
-
-    var_dump($shop1);
-
-    echo "<br>";
-
-    $product1 = new Product ("cat", "toys", "ball", 5);
 
 
-    var_dump($product1);
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    echo "<br>";
+        <?php
+           require_once("./data.php");
+        ?>
 
-?>
+        <title>
+
+            <?php
+                echo $shop1 -> getshopName();
+            ?>
+
+        </title>
+
+        <style>
+            img{
+                width:200px;
+            }
+            .card{
+                text-align:center;
+                border: 1px, solid, black;
+                padding:55px;
+            }
+
+            ul{
+                list-style:none;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1>
+                <?php
+                    echo $shop1 -> getshopName();
+                ?>
+            </h1>
+        </header>
+        
+        <main>
+            <div class="card">
+                <img src="
+                <?php
+                    echo $detailsFood -> getProductImage();
+                ?>
+                ">
+                <ul>
+                    <li>
+
+                        NOME : 
+                        <?php
+                            echo $detailsFood -> getproductName();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        ANIMALE : 
+                        <?php
+                            echo $detailsFood -> getpetCategory();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        PREZZO : 
+                        <?php
+                            echo $detailsFood -> getproductPrice();
+                        ?>
+                        E
+
+                    </li>
+
+                    <li>
+
+                        TIPOLOGIA : 
+                        <?php
+                            echo $detailsFood -> getTipology();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        SCADENZA : 
+                        <?php
+                            echo $detailsFood -> getExpiry();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        CODICE PRODOTTO : 
+                        <?php
+                            echo $detailsFood -> getProductCode();
+                        ?>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="
+                <?php
+                    echo $detailsObject -> getProductImage();
+                ?>
+                ">
+                <ul>
+                    <li>
+
+                        NOME : 
+                        <?php
+                            echo $detailsObject -> getproductName();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        ANIMALE : 
+                        <?php
+                            echo $detailsObject -> getpetCategory();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        PREZZO : 
+                        <?php
+                            echo $detailsObject -> getproductPrice();
+                        ?>
+                        E
+
+                    </li>
+
+                    <li>
+
+                        TIPOLOGIA : 
+                        <?php
+                            echo $detailsObject -> getTipology();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        COLORE : 
+                        <?php
+                            echo $detailsObject -> getColor();
+                        ?>
+
+                    </li>
+
+                    <li>
+
+                        GRANDEZZA : 
+                        <?php
+                            echo $detailsObject -> getSize();
+                        ?>
+
+                    </li>
+                </ul>
+            </div>
+
+        </main>
+    </body>
+    </html>
