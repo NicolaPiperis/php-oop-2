@@ -107,6 +107,15 @@
                         ?>
 
                     </li>
+
+                    <li>
+
+                        PESO : 
+                        <?php
+                            echo $detailsFood -> getWeight();
+                        ?>
+
+                    </li>
                 </ul>
             </div>
 

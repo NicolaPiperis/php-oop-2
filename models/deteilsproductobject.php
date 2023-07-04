@@ -4,9 +4,9 @@
             private $size;
     
             public function __construct (
-               $productImage, $petCategory, $tipology, $productName, $productPrice, $color, $size
+               $productImage, $petCategory, $tipology, $productName, $productPrice, $weight, $color, $size
             ) {
-                parent :: __construct ($productImage, $petCategory, $tipology, $productName,  $productPrice);
+                parent :: __construct ($productImage, $petCategory, $tipology, $productName,  $productPrice, $weight);
     
                 $this -> setColor($color);
                 $this -> setSize($size);
