@@ -29,12 +29,15 @@
         private $productName;
         private $productPrice;
 
-        public function __construct ($productImage, $petCategory, $tipology, $productName, $productPrice, $weight) {
+        public function __construct ($productImage, $petCategory, $tipology, $productName, $productPrice, 
+                                     $weight) {
             $this -> setProductImage($productImage);
             $this -> setpetCategory($petCategory);
             $this -> setTipology($tipology);
             $this -> setproductName($productName);
             $this -> setproductPrice($productPrice);
+
+            $this -> setWeight($weight);
         }
 
         public function getProductImage() {

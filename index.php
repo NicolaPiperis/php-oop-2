@@ -114,9 +114,11 @@
                         <?php
                             echo $detailsFood -> getWeight();
                         ?>
+                        KG
 
                     </li>
                 </ul>
+                
             </div>
 
             <div class="card">
@@ -178,6 +180,16 @@
                         <?php
                             echo $detailsObject -> getSize();
                         ?>
+
+                    </li>
+
+                    <li>
+
+                        PESO : 
+                        <?php
+                            echo $detailsObject -> getWeight();
+                        ?>
+                        KG
 
                     </li>
                 </ul>

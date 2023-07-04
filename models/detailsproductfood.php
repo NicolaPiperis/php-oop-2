@@ -4,7 +4,9 @@
         private $productCode;
 
         public function __construct (
-            $productImage, $petCategory, $tipology, $productName, $productPrice, $weight, $expiry, $productCode
+            $productImage, $petCategory, $tipology, $productName, $productPrice,
+            $weight,
+            $expiry, $productCode
         ) {
             parent :: __construct ($productImage, $petCategory, $tipology, $productName,  $productPrice, $weight);
 

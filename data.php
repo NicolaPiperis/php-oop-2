@@ -10,6 +10,6 @@
 
     $detailsFood = new DetailsProductFood ("https://www.essiccare.com/wp-content/uploads/2019/02/DSC_2781-768x512.jpg", "dog", "food", "dry meat", "22", 2, "01/01/2026" , "000000");
 
-    $detailsObject = new DetailsProductObject ("https://as2.ftcdn.net/v2/jpg/05/46/57/61/1000_F_546576148_CnjaWRENfVZiKTqtvx0UPW19rPvW9GQT.jpg", "cat", "toy", "duck", "18", 2, "yellow" , "medium");
+    $detailsObject = new DetailsProductObject ("https://as2.ftcdn.net/v2/jpg/05/46/57/61/1000_F_546576148_CnjaWRENfVZiKTqtvx0UPW19rPvW9GQT.jpg", "cat", "toy", "duck", "18", 0.3, "yellow" , "medium");
 
 
