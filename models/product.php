@@ -10,10 +10,10 @@
         }
         public function setWeight($weight) {
 
-            // if ($weight <= 0) {
+            if ($weight <= 0) {
 
-            //     throw new Exception("Weight can't be negative");
-            // }
+                throw new Exception("Weight can't be negative");
+            }
 
             $this -> weight = $weight;
         }
